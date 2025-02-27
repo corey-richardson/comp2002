@@ -1,0 +1,88 @@
+\documentclass[25pt, a0paper,portrait]{tikzposter} %orientation options: portrait, landscape
+\usepackage[utf8]{inputenc}
+
+\title{Poster Title}
+\author{Author Name}
+
+\usepackage[backend=biber, style=numeric, sorting=none, locallabelwidth]{biblatex}
+\bibliography{ref}
+
+\usetheme{Rays} % Options: Default, Simple, Basic, Rays, Wave, Envelope, Board, Autumn, Desert
+
+
+%import necessary packages
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{comment}
+\usepackage{amsmath,amssymb}
+
+\begin{document}
+
+\maketitle
+
+
+\block{Introduction}
+{
+
+}
+
+
+\begin{columns}
+
+    \column{0.5}%set width of first column
+
+    \block{Block of text}{
+
+    }
+
+    
+    \block{Text box}{
+Equation:
+\begin{equation*}
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+\end{equation*}
+\linebreak
+Image:\\
+\linebreak
+        \begin{tikzfigure}
+            \includegraphics{image.png}
+        \end{tikzfigure}
+  
+    }
+
+        
+
+    
+    \column{0.5}%set width of second column
+
+    \block{Another text box}{
+              \begin{tikzfigure}
+            \includegraphics[scale=0.6]{image.png}
+        \end{tikzfigure}
+    }
+
+    \block{Text box again}
+    {
+\textbf{Some bold text}
+
+    }
+
+    \block{6. Plots}{
+
+    }
+        
+
+    %if necessary, add more columns, adjusting the widths
+    %more columns may be necessary in landscape mode
+    
+\end{columns}
+
+\block{References}
+{
+
+}
+
+
+\end{document}
